@@ -1,0 +1,35 @@
+How to start Tailwindcss
+Follow some steps: 
+1. npm init -y
+2. npm install -D tailwindcss postcss autoprefixer
+3. npm install -D tailwindcss vite
+4. npx tailwindcss init -p
+5. link "style.css" in head and add this into it
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+5. In config.js file replace content[] , with content["*"]
+6. Add "start" : "vite" in script tag in package.json 
+7. npm run start
+
+
+
+
+                  Add custom classes in config file
+
+If we have to add some value which are not defined in tailwindcss like in font size there is 
+no 10xl size and we want a size for our font bigger than 9xl then we will add values in the config file 
+run this command to see default classes with their values
+
+           npx tailwindcss init --full
+as tailwindcss.config already exist and we add our custom classes in the extend for the ease we can create another 
+config file just see the default classes we write our classes in the extend 
+       
+                 npx tailwindcss init confgAman --full // just to see and for ease
+
+Deploy Website in production
+
+simply follow 2 steps:
+1) Add "build":"vite build" in package.json
+2) Then run in the terminal "npm run build"
+2) "dist" folder will be created which we will be use in production can add in github
